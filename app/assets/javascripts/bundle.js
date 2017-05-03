@@ -118,7 +118,6 @@ class FollowToggle {
 
   handleClick(e) {
     e.preventDefault();
-    debugger
     const followToggle = this;
 
     if (this.followState === "followed") {
