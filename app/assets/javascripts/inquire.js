@@ -121,6 +121,12 @@ class DOMNodeCollection {
     }
   }
 
+  removeAttr(attrName) {
+    this.each((el) => {
+      el.removeAttribute(attrName)
+    })
+  }
+
   addClass(...classNames) {
     this.each((el) => {
       el.classList.add(...classNames);
@@ -199,7 +205,6 @@ class DOMNodeCollection {
         el[eventKey] = [];
       }
       el[eventKey].push(callback);
-      console.log(el)
       // inquire(el).attr('callback', callback);
 
     });
